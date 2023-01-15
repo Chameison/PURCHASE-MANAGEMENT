@@ -1,0 +1,49 @@
+<app-header></app-header>
+  <mat-card class="card">
+
+    <div class="container">
+      <div class="column-flex mat-elevation-z8">
+        <div class="title">
+          <h2>Nova Compra</h2>
+          <a><img src="../../../assets/car.png" ></a>
+        </div>
+        <div class="cardForm">
+          <form (ngSubmit)="submit(form)" #form="ngForm">
+            <div class="titleForm">
+              <span>Solicitar Compra</span>
+
+            </div>
+            <input type="hidden" name="_id" [(ngModel)]="registro._id">
+
+            <input type="date" name="date" [(ngModel)]="registro.date" placeholder="Data da compra">
+            <input type="text" name="date"[(ngModel)]="registro.date" placeholder="Data da Compra">
+
+            <input type="text" name="product" [(ngModel)]="registro.product" placeholder="Produto">
+            <input type="text" name="quant" [(ngModel)]="registro.quant" placeholder="Quantia">
+            <input type="text" name="valueOne" [(ngModel)]="registro.valueOne" placeholder="Valor unitario">
+            <input type="text" name="valueMany" [(ngModel)]="registro.valueMany" placeholder="Valor total">
+            <select name="modality" [(ngModel)]="registro.modality">
+              <option [ngValue]="null">Modalidade</option>
+              <option *ngFor="let item of registro.modality" [ngValue]="item">{{item}}</option>
+            </select>
+            <select name="formPag" [(ngModel)]="registro.formPag">
+              <option [ngValue]="null">Forma de pagamento</option>
+              <option value="A prazo">A prazo</option>
+              <option value="A vista">A vista</option>
+            </select>
+            <select name="authorizer" [(ngModel)]="registro.authorizer">
+              <option [ngValue]="null">Autorizador</option>
+              <option *ngFor="let x of registro.authorizer"></option>
+            </select>
+
+            <input type="text" name="requester" placeholder="Solicitante">
+
+            <button type="submit" [disabled]="form.invalid">Salvar</button>
+            <button type="submit" routerLink="../" value="Cancelar"> Cancelar</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+<app-footer></app-footer>
