@@ -31,8 +31,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/teste/menu.js",
-              "./node_modules/teste/search.js"
+              "./src/assets/js/menu.js",
+              "./src/assets/js/search.js"
             ]
           },
           "configurations": {
