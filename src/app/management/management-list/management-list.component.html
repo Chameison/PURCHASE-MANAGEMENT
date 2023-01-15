@@ -1,0 +1,95 @@
+<!-- Tabela com a listagem das compras  -->
+<mat-table  [dataSource]="management" >
+        <!-- Name Column -->
+        <ng-container matColumnDef="_id" class="id">
+          <mat-header-cell class="widt"  *matHeaderCellDef>ID</mat-header-cell>
+          <mat-cell class="widt"  *matCellDef="let management">{{ management._id }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="date">
+          <mat-header-cell class="alin"  *matHeaderCellDef>DATA</mat-header-cell>
+          <mat-cell class="alin" *matCellDef="let management">{{ management.date }}</mat-cell>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="product">
+          <mat-header-cell *matHeaderCellDef>PRODUTO </mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.product }}</mat-cell>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="quant">
+          <mat-header-cell *matHeaderCellDef>QUANTIA</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.quant }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="valueOne">
+          <mat-header-cell *matHeaderCellDef>VALOR UN</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.valueOne }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="valueMany">
+          <mat-header-cell *matHeaderCellDef>VALOR TOTAL</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.valueMany }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="modality">
+          <mat-header-cell *matHeaderCellDef>MODALIDADE</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.modality }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="formPag">
+          <mat-header-cell *matHeaderCellDef>PAGAMENTO</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.formPag }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="provider">
+          <mat-header-cell *matHeaderCellDef>FORNECEDOR</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.provider }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="authorizer">
+          <mat-header-cell *matHeaderCellDef>AUTORIZADOR</mat-header-cell>
+          <mat-cell *matCellDef="let management">{{ management.authorizer }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="requester">
+          <mat-header-cell *matHeaderCellDef>SOLICITANTE</mat-header-cell>
+          <mat-cell  *matCellDef="let management">{{ management.requester }}</mat-cell>
+        </ng-container>
+
+        <ng-container class="acao" matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef class="column-flex action-column">
+
+            <button
+              mat-mini-fab
+              color="accent"
+              aria-label="Add a new buy"
+              (click)="onAdd()"
+              class="action-column-header">
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-header-cell>
+
+          <mat-cell *matCellDef="let management" class="action-column">
+            <button
+              mat-icon-button
+              color="primary"
+              aria-label="Edit management"
+              >
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button
+              mat-icon-button
+              color="warn"
+              aria-label="Remove compra"
+
+              >
+              <mat-icon>delete</mat-icon>
+            </button>
+
+            <button
+              mat-icon-button
+              color=""
+              aria-label="aceitar"
+              (click)="onSave()"
+              >
+              <mat-icon>print</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>

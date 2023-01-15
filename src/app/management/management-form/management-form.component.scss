@@ -1,0 +1,107 @@
+
+
+mat-card{
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loading-spinner {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(63, 60, 60, 0.15);
+}
+
+.card{
+  margin-top: 200px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+// header form
+.title{
+  background-color: #EBCB06;
+  padding: 5px 40px ;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.title h2{
+  margin-top: 25px;
+  font-size: 25px;
+  width: 175px;
+  border-top: 1px solid black;
+}
+.title img{
+  width: 70px;
+}
+
+.title .search{
+  margin-top: 25px;
+}
+
+
+// FORMULARIO
+form{
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: weight;
+  font-style: normal;
+  padding: 20px 200px;
+
+}
+.titleForm {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+select{
+  font-weight: lighter;
+  font-family: inherit;
+  font-size: 12px;
+}
+input[type="text"], input[type="date"], select, textarea{
+  box-sizing: border-box;
+  outline: none;
+  color: #333333;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: lighter;
+  height: 45px;
+  background-color: #f1f1f1;
+}
+textarea{
+  height: 200px;
+}
+
+button[type="submit"]{
+  margin-right: 10px;
+  padding: 19px 34px 18px 34px;
+  color: #ffffff;
+  background: #0B245F;
+  font-size: 15px;
+  border: none;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .3s;
+  outline: none;
+  border-radius: 10px;
+}
+
+button:hover{
+  background: #c8c8c8;
+  color: black;
+}

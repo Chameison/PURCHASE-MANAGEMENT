@@ -1,0 +1,210 @@
+@import '@angular/material/theming';
+@include mat-core();
+
+$custom-app-primary: mat-palette($mat-blue);
+$custom-app-secondary: mat-palette($mat-indigo, A200, A400, 700);
+$custom-app-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($custom-app-primary, $custom-app-secondary,  $custom-app-warn);
+
+@include angular-material-theme($custom-theme);
+
+html, body { height: 100%; }
+body { margin: 0; padding: 0; box-sizing: border-box; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+// Menu
+
+.logo{
+  /*Formatação da Logo */
+  margin-top: 50px;
+  float: left;
+  width: auto;
+  height: 70px;
+
+  margin-left: 25px;
+  margin-top: 5px;
+}
+.navbar {
+  background: linear-gradient(72deg, #312296 5%, #000000 95%);
+  color: #fff;
+  width: 100%;
+  line-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar a.navbar-brand {
+  float: left;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 30px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.navbar a.navbar-brand span {
+  font-size: 28px;
+  font-weight: 700;
+}
+.navbar ul {
+  float: right;
+  list-style: none;
+  height: inherit;
+  line-height: inherit;
+  padding-right: 20px;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  min-width: 120px;
+  padding: 0 10px;
+}
+.navbar ul li a:hover {
+  color: #FFE126;
+}
+.navbar .navbar-toggler {
+  display: none;
+}
+
+.navbar a.active{
+  color: #FFE126;
+}
+
+.navbar a, .nav-bar a:hover, .nav-bar a:visited, .nav-bar a:active{
+  -webkit-backface-visibility:hidden;
+        backface-visibility:hidden;
+  position:relative;
+  transition:0.5s color ease;
+  text-decoration:none;
+}
+
+.navbar a.before:before,.nav-bar a.after:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+
+}
+.navbar a.before:before{
+  top:-0.25em;
+}
+.navbar a.after:after{
+  bottom:-0.25em;
+}
+.navbar a.before:before,a.after:after{
+  height:5px;
+  height:0.35rem;
+  width:0;
+  background:#05db3be1;
+}
+
+#techMobile{
+  display: none;
+}
+
+
+
+@media (max-width: 800px) {
+#techImg{
+    display: none;
+}
+#techMobile{
+    display: block;
+}
+.navbar {
+    padding: 0;
+    background: linear-gradient(72deg, #312296 5%, #000000 95%);
+    font-size: 25px;
+}
+.navbar ul {
+    width: 100%;
+    padding: 5;
+    background: linear-gradient(72deg, #312296 5%, #000000 95%);
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+
+}
+.navbar ul.open {
+    max-height: 100vh;
+}
+.navbar ul li {
+    width: 100%;
+}
+.navbar ul li a {
+    padding: 0;
+}
+.navbar .navbar-toggler {
+    display: block;
+    position: absolute;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+    border: none;
+}
+.navbar .navbar-toggler span,
+.navbar .navbar-toggler span::before,
+.navbar .navbar-toggler span::after {
+    display: block;
+    content: '';
+    background-color: #fff;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+}
+.navbar .navbar-toggler span::before {
+    transform: translateY(-8px);
+}
+.navbar .navbar-toggler span::after {
+    transform: translateY(5px);
+}
+
+.navbar .navbar-toggler.open-navbar-toggler span {
+    background-color: transparent;
+
+
+}
+.navbar .navbar-toggler.open-navbar-toggler span::before {
+    transform: translateY(0px) rotate(45deg);
+
+}
+.navbar .navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+
+  }
+}
+
+footer.footer{
+    margin-top: 200px;
+    padding: 15px 0;
+    background: linear-gradient(72deg, #312296 5%, #000000 95%);
+    text-align: center;
+    color: black;
+
+}
+footer.footer a{
+    text-decoration: none;
+    color: white;
+}

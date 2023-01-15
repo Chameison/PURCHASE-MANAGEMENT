@@ -1,0 +1,27 @@
+mat-table{
+  overflow: auto;
+  max-height: 600px;
+}
+mat-header-cell{
+  font-weight: bolder;
+  font-size: 10px;
+}
+mat-cell{
+  margin: 0px;
+  font-weight: normal;
+  font-size: 8px;
+}
+// button:hover{
+//     background-color: #486199;
+// }
+.action-column {
+  flex: 0 0 125px;
+}
+.widt{
+  padding: 5px 10px;
+}
+
+// mat-cell,:first-of-type{
+//   padding-left: 5px;
+// }
+// mat-header-cell:first-of-type
