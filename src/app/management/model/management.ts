@@ -1,3 +1,4 @@
+import { Empresa } from './empresa';
 export interface Management {
   _id: number,
   date: string,
@@ -7,7 +8,7 @@ export interface Management {
   valueMany: string,
   modality: string,
   formPag: string,
-  provider: string,
+  empresa: Empresa,
   authorizer: string,
   requester: string
 }

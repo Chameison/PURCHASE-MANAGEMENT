@@ -1,32 +1,32 @@
 
 <app-header></app-header>
-  <mat-card class="card">
+
     <div class="container">
       <form class="title">
         <h2>Gestão de compras</h2>
         <div class="search">
           <form>
             <input type="text" placeholder="Buscar..." (input)="search($event)">
-            <a><mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon></a>
+            <!-- <a><mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon></a> -->
           </form>
 
 
         </div>
       </form>
       <div class="column-flex mat-elevation-z8">
-        <app-management-list *ngIf="management$ | async as management; else loading" [management]="management"></app-management-list>
+        <!-- <app-management-list *ngIf="management$ | async as management; else loading" [management]="management"></app-management-list>
 
-        <div >
+        <div > -->
 
           <!--Spinner-->
-        </div>
-          <ng-template #loading>
+      <app-list-management></app-list-management>
+          <!-- <ng-template #loading>
             <div class="loading-spinner">
               <mat-spinner> </mat-spinner>
 
             </div>
-          </ng-template>
+          </ng-template> -->
       </div>
-    </div>
-  </mat-card>
+      </div>
+
 <app-footer></app-footer>
