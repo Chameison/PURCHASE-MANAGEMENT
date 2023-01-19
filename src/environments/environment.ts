@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://10.15.88.12:8000/docs#/'
+  API_URL: 'http://localhost:3000'
 };
-
+// ta aqui e a tua base, usando essa variavel tu acha essa rota ali emcima
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

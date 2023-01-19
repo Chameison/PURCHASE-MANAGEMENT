@@ -1,0 +1,111 @@
+{
+  "clientes": [
+    {
+      "codclient": "34499",
+      "cpf": "34325056000138",
+      "nome": "TRIX SERVI u00c7OS INTEGRADOS LTDA",
+      "logradouro": "JOAQUIM NABUCO",
+      "cep": "60125121",
+      "estado": "CE",
+      "municipio": "FORTALEZA"
+    },
+    {
+      "codclient": "34499",
+      "cpf": "34325056000138",
+      "nome": "TRIX SERVI u00c7OS INTEGRADOS LTDA",
+      "logradouro": "JOAQUIM NABUCO",
+      "cep": "60125121",
+      "estado": "CE",
+      "municipio": "FORTALEZA"
+    },
+    {
+      "codclient": "34499",
+      "cpf": "34325056000138",
+      "nome": "TRIX SERVI u00c7OS INTEGRADOS LTDA",
+      "logradouro": "JOAQUIM NABUCO",
+      "cep": "60125121",
+      "estado": "CE",
+      "municipio": "FORTALEZA"
+    }
+  ],
+  "empresa": [
+    {
+      "id": "01",
+      "name": "LTDA PRINTER",
+      "address": "Av Lbrador",
+      "state": "Acre",
+      "city": "Rio Branco",
+      "email": "printer@gmail.com",
+      "phone": "990404203"
+    },
+    {
+      "id": "01",
+      "name": "LTDA PRINTER",
+      "address": "Av Lbrador",
+      "state": "Acre",
+      "city": "Rio Branco",
+      "email": "printer@gmail.com",
+      "phone": "990404203"
+    },
+    {
+      "id": "01",
+      "name": "LTDA PRINTER",
+      "address": "Av Lbrador",
+      "state": "Acre",
+      "city": "Rio Branco",
+      "email": "printer@gmail.com",
+      "phone": "990404203"
+    },
+    {
+      "id": "UutLxI8"
+    },
+    {
+      "id": "Ypr7F6H"
+    },
+    {
+      "id": "tPQ_-2m"
+    }
+  ],
+  "compras": [
+    {
+      "_id": "1",
+      "date": "10/01/2023",
+      "product": "Mouse ",
+      "quant": "1",
+      "valueOne": "100,00",
+      "valueMany": "100,00",
+      "modality": "aa",
+      "formPag": "A vista",
+      "authorizer": "Joao",
+      "requester": "Sergio"
+
+    },
+    {
+      "_id": "1",
+      "date": "10/01/2023",
+      "product": "Mouse ",
+      "quant": "1",
+      "valueOne": "100,00",
+      "valueMany": "100,00",
+      "modality": "aa",
+      "formPag": "A vista",
+      "authorizer": "Joao",
+      "requester": "Sergio"
+
+    },
+    {
+      "_id": "1",
+      "date": "10/01/2023",
+      "product": "Mouse ",
+      "quant": "1",
+      "valueOne": "100,00",
+      "valueMany": "100,00",
+      "modality": "aa",
+      "formPag": "A vista",
+      "empresa": "e",
+      "authorizer": "Joao",
+      "requester": "Sergio"
+
+    }
+  ]
+}

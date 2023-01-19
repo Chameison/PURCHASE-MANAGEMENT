@@ -2,14 +2,15 @@
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListManagementComponent } from './list-management/list-management.component';
-import { NgModule } from '@angular/core';
 import { ManagementFormComponent } from './management-form/management-form.component';
 import { NoteManagementComponent } from './note-management/note-management.component';
 import { CommonModule } from '@angular/common';
 import { ManagamentRoutingModule } from './management-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ManagementComponent } from './management/management.component';
-
+import { ListClienteManagementComponent } from './list-cliente-management/list-cliente-management.component';
+import { FormClienteComponent } from './form-cliente/form-cliente.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,16 @@ import { ManagementComponent } from './management/management.component';
     NoteManagementComponent,
     HeaderComponent,
     FooterComponent,
-    ListManagementComponent
+    ListManagementComponent,
+    ListClienteManagementComponent,
+    FormClienteComponent
   ],
   imports: [
     CommonModule,
     ManagamentRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+
   ]
 })
 export class ManagementModules { }

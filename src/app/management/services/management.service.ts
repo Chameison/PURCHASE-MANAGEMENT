@@ -9,9 +9,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ManagementService implements ICrudService<Management> {
+export class ManagementService {
   constructor(private http: HttpClient) { }
-  apiUrl: string = environment.API_URL + '/client/'
+  apiUrl: string = environment.API_URL + '/compras'
 
   // filter(x: any, arg1: { management: any; "": any; }): import("rxjs").Observable<Management[]> {
   //   throw new Error('Method not implemented.');
@@ -27,13 +27,7 @@ export class ManagementService implements ICrudService<Management> {
 
 
 
-  listAll() {
-    return this.http.get<Management[]>(this.apiUrl).pipe( //o
-      first(),
-      delay(2000),
-      tap(management => console.log(management)) //
-    );
-  }
+
 
   getById(id: number): Observable<Management> {
     let url = this.apiUrl + id;

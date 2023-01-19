@@ -1,46 +1,49 @@
 
-<table class="table table" id="tableEquipment">
-  <thead>
-    <tr>
-      <th>ID </th>
-      <th>DATA</th>
-      <th>DESCRIÇÃO</th>
-      <th>QUANTIA</th>
-      <th>VALOR UNITARIO</th>
-      <th>VALOR TOTAL</th>
-      <th>MODALIDADE</th>
-      <th>FORMA DE PAGAMENTO</th>
-      <th>EMPRESA</th>
-      <th>AUTORIZADORL</th>
-      <th>SOLICITANTE</th>
+<div class="tableDiv">
+  <table class="table table" id="tableEquipment">
+    <thead>
+      <tr>
+        <th>ID </th>
+        <th>DATA</th>
+        <th>DESCRIÇÃO</th>
+        <th>QUANTIA</th>
+        <th>VALOR UNITARIO</th>
+        <th>VALOR TOTAL</th>
+        <th>MODALIDADE</th>
+        <th>FORMA DE PAGAMENTO</th>
+        <th>EMPRESA</th>
+        <th>AUTORIZADORL</th>
+        <th>SOLICITANTE</th>
+        <th> <button routerLink="/new"type="button" class="add btn btn-info">Adicionar</button>
 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of registros">
+        <td> {{ item._id}} </td>
+        <td> {{ item.date }} </td>
+        <td> {{ item.product}} </td>
+        <td> {{ item.quant}} </td>
+        <td> {{ item.valueOne}} </td>
+        <td> {{ item.valueMany}} </td>
+        <td> {{ item.modality}} </td>
+        <td> {{ item.formPag}} </td>
+        <td> {{ item.empresa}} </td>
+        <td> {{ item.authorizer}} </td>
+        <td> {{ item.requester}} </td>
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of registros">
-      <td> {{ item._id}} </td>
-      <td> {{ item.date }} </td>
-      <td> {{ item.product}} </td>
-      <td> {{ item.quant}} </td>
-      <td> {{ item.valueOne}} </td>
-      <td> {{ item.valueMany}} </td>
-      <td> {{ item.modality}} </td>
-      <td> {{ item.formPag}} </td>
-      <td> {{ item.empresa.name}} </td>
-      <td> {{ item.authorizer}} </td>
-      <td> {{ item.requester}} </td>
+        <td class="fit">
+          <button type="button" (click)="delete(item._id)"><i class="del fas fa-trash-alt"></i></button>
+          <button routerLink="/new"><i  class="confirm fas fa-check-circle"></i></button>
+          <button><i type="button" routerLink="/new" class="print fas fa-print"></i></button>
 
-      <td class="fit">
-        <button routerLink="/report/form" type="button" [queryParams]="{ id: item._id }"  class="btn btn-secondary">Editar</button>
-        <button type="button"(click)="delete(item._id)" class="btn btn-danger">Deletar</button>
-
-      </td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="9">Total de registros: {{ registros.length }} </td>
-    </tr>
-  </tfoot>
-</table>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="9">Total de registros: {{ registros.length }} </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

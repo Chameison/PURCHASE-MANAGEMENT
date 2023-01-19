@@ -136,16 +136,14 @@ h2{
   padding: 10px 0;
 
 }
-.body h2,p{
-  margin-left: 10px;
-}
+// .body h2,p{
+//   margin-left: 10px;
+// }
 .headerNote{
   height: 130px;
-
 }
-.sub{
-  height: 30px;
-  width: 200px;
+.dadosEmpresa{
+  height: 125px;
 }
 .sub p,h2{
   display: inline-block;
@@ -154,16 +152,21 @@ h2{
 .sub h2{
   font-size: 12px;
   font-weight: normal;
+  padding-left: 10px;
 }
 .sub p{
   font-size: 10px;
   font-weight: lighter;
+  padding-left: 35px;
 }
 
 .empresa p{
   font-size: 12px;
   margin: 10px;
   font-weight: normal;
+}
+.sub{
+  display: inline;
 }
 @page {
   size: A4;

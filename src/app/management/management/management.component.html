@@ -1,32 +1,29 @@
 
-<app-header></app-header>
+<body>
 
-    <div class="container">
-      <form class="title">
-        <h2>Gestão de compras</h2>
-        <div class="search">
-          <form>
-            <input type="text" placeholder="Buscar..." (input)="search($event)">
-            <!-- <a><mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon></a> -->
-          </form>
+  <app-header></app-header>
 
+      <div class="container">
+        <form class="title">
+          <h2>Gestão de compras</h2>
+          <div class="search">
+            <form>
+              <input type="search"
+              name="search"  placeholder="Buscar..." #termobusca="ngModel"
+               ngModel
+               (ngModelChange)="busca(termobusca.value)">
+              <!-- <a><mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon></a> -->
 
+            </form>
+            <i class="fas fa-search"></i>
+
+          </div>
+        </form>
+        <div class="column-flex mat-elevation-z8">
+
+        <app-list-cliente-management></app-list-cliente-management>
         </div>
-      </form>
-      <div class="column-flex mat-elevation-z8">
-        <!-- <app-management-list *ngIf="management$ | async as management; else loading" [management]="management"></app-management-list>
-
-        <div > -->
-
-          <!--Spinner-->
-      <app-list-management></app-list-management>
-          <!-- <ng-template #loading>
-            <div class="loading-spinner">
-              <mat-spinner> </mat-spinner>
-
-            </div>
-          </ng-template> -->
-      </div>
       </div>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+    </body>

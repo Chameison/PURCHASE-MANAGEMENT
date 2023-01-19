@@ -1,5 +1,5 @@
 export interface Empresa {
-  _id: number,
+  id: number,
   name: string,
   address: string,
   state: string,
