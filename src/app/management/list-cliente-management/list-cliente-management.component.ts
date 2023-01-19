@@ -38,10 +38,10 @@ registros: Cliente[] = Array<Cliente>();  // table!: any;
       });
     }  }
   ngOnInit(): void {
-    this.service.getAll().subscribe((data: Cliente) => {
-      this.cliente = data;
-      console.log(this.cliente);
-    })
+    // this.service.getAll().subscribe((data: Cliente) => {
+    //   this.cliente = data;
+    //   console.log(this.cliente);
+    // })
     this.get()
   }
 }
