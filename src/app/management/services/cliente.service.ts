@@ -9,16 +9,16 @@ import { Observable, tap, catchError, first, delay, map } from 'rxjs';
   providedIn: 'root'
 })
 export class ClienteService {
-  readonly endpoint = 'http://localhost:3000/clientes'
-  apiUrl: string = environment.API_URL + '/clientes'
+  // readonly endpoint = 'http://localhost:3000/clientes'
+  apiUrl: string = environment.API_URL + '/client'
 
   constructor( private http: HttpClient) { }
 
 
-  getAll(): Observable<Cliente>{
-    return this.http.get<Cliente>(this.endpoint);
+  // getAll(): Observable<Cliente>{
+  //   return this.http.get<Cliente>(this.endpoint);
 
-  }
+  // }
 
   listAll() {
     return this.http.get<Cliente[]>(this.apiUrl).pipe( //o

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:3000'
+  API_URL: 'http://10.15.88.12:8000/cliente/00'
 };
 // ta aqui e a tua base, usando essa variavel tu acha essa rota ali emcima
 /*
